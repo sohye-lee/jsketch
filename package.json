@@ -7,7 +7,8 @@
     "start": "npm run lite",
     "lite": "lite-server"
   },
-  "author": "",
+  "repository": "https://github.com/sohye-lee/jsketch.git",
+  "author": "Sophie Lee <sohyelee@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "lite": "^4.0.5",
