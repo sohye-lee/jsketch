@@ -7,12 +7,20 @@
     "start": "npm run lite",
     "lite": "lite-server"
   },
-  "repository": "https://github.com/sohye-lee/jsketch.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sohye-lee/jsketch.git"
+  },
   "author": "Sophie Lee <sohyelee@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "lite": "^4.0.5",
     "lite-server": "^2.5.4"
   },
-  "description": ""
+  "description": "",
+  "bugs": {
+    "url": "https://github.com/sohye-lee/jsketch/issues"
+  },
+  "homepage": "https://github.com/sohye-lee/jsketch#readme",
+  "devDependencies": {}
 }

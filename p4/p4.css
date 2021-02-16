@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: gray;
+}
+
+h1 {
+    position: relative;
+    z-index: -1;
+    font-size: 3rem;
+    color: white;
+
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -100;
+}
+
+/* h1 {
+    font-size: 5rem;
+    color: white;
+} */
+
+.canvas {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+}

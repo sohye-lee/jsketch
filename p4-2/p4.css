@@ -1,0 +1,224 @@
+/* =========== BASIC SETTINGS ========== */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Roboto+Mono:wght@100;200;400&display=swap');
+
+:root {
+    --White : #fff;
+    --Gray : rgb(140, 142, 143);
+    --Smoke : rgb(245, 245, 245);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--Smoke);
+    font-family: 'Inconsolata', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.canvas {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+}
+
+
+section {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* ============ HOME ============ */
+.home { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 110;
+}
+.home__background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.colorChange {
+    background-color: transparent;
+    animation: colorChange 500ms ease-in-out;
+}
+@keyframes colorChange {
+    0% {
+        background-color: transparent;
+    }
+    20% {
+        background-color: #000;
+    }
+    100% {
+        background-color: transparent;
+    }
+
+}
+
+.home h1 {
+    position: relative;
+    z-index: 110;
+    font-size: 2rem;
+    color: var(--Smoke);
+    letter-spacing: 2px;
+}
+
+
+
+.nav__left {
+    position: fixed;
+    top: 0;
+    left: 20px;
+    z-index: 109;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+}
+
+.left__item {
+    margin-bottom: 18px;
+    text-shadow: 1px 1px 1px  var(--Smoke), -1px -1px 1px  var(--Smoke);
+    font-weight: 100;
+    z-index: 109;
+}
+
+/* ============ irregular shape toggler ===============  */
+.toggler {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    height: 50px;
+    width: 50px;
+    animation: irregularShape 8s infinite;
+    /* box-shadow: .5px .5px 1px  whitesmoke, -.5px -.5px 1px  whitesmoke, .5px -.5px 1px whitesmoke, -.5px .5px 1px whitesmoke; */
+    z-index: 111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggler__inner {
+    position: relative;
+    width: 95%;
+    height: 95%;
+    background-color: var(--Smoke);
+    animation: irregularShape 8s infinite;
+}
+
+@keyframes irregularShape {
+    0% {
+        border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+    }
+    20% {
+        border-radius: 70% 30% 44% 56% / 30% 59% 41% 70%;
+    }
+    40% {
+        border-radius: 86% 14% 14% 86% / 30% 81% 19% 70% ;
+    }
+    60% {
+        border-radius: 53% 47% 62% 38% / 73% 36% 64% 27% ;
+    }
+    80% {
+        border-radius: 33% 67% 33% 67% / 73% 26% 74% 27% ;
+    }
+    100% {
+        border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+    }
+}
+
+/* ============ irregular shape toggler ===============  */
+
+.nav__top {
+    position: fixed;
+    top: 40px;
+    right: 0px;
+    width: 100vw;
+    padding-right:40px;
+    z-index: 111;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav__toggler {
+    position: relative;
+    top: 0;
+    right: 0;
+    height: 50px;
+    width: 100%;
+    /* animation: irregularShape 8s infinite; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+
+
+.nav__toggler__inner {
+    height: 3px;  
+    width: 40px;
+    margin-bottom: 5px;
+    box-shadow: 0 3px var(--Smoke);
+}
+
+
+
+.nav__list {
+    margin: 0 30px;
+    display: none;
+}
+
+.top__item {
+    margin: 0 5px;
+}
+
+.top__item a {
+    /* text-shadow: .5px .5px 1px  var(--Smoke), -.5px -.5px 1px  var(--Smoke), .5px -.5px 1px var(--Smoke), -.5px .5px 1px var(--Smoke);  */
+    background-color: var(--Smoke);
+    padding: 3px 5px;
+}
+.nav__toggler__clicked {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+}
+
+.nav__list__clicked {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;;
+}
+
+.toggler__x {
+    transform: rotate(-45deg);
+}
+
+a {
+    text-decoration: none;
+
+}
+
